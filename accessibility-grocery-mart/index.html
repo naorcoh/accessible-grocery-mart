@@ -4,9 +4,185 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grocery Mart</title>
+    <meta name="author" content="Naor Cohen" />
+    <meta
+      name="description"
+      content="This is Grocery Mart Online Shop a online market to fresh vegetables and grocery products"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Grocery Mart Online Shop</title>
   </head>
   <body>
-    <h1>Grocery Mart Oline Grocery Shopping</h1>
+    <!-- header -->
+    <header>
+      <button id="showLoginDialog">Login</button>
+
+      <!-- main title -->
+      <h1>Grocery Mart <span>Online Grocery Shopping</span></h1>
+      <!--// main title -->
+
+      <!-- cart -->
+      <button id="cart">Cart</button>
+      <!--// cart -->
+
+      <!-- search -->
+      <button id="search">Search</button>
+      <!--// search -->
+    </header>
+    <!--// header -->
+
+    <!-- nav -->
+    <nav>
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <details>
+            <summary>Products</summary>
+            <h2>Kitchen</h2>
+            <ul>
+              <li><a href="">Meat & Seafood</a></li>
+              <li>
+                <a href="">Snack Foods <span class="new">new</span></a>
+              </li>
+              <li><a href="">Oils, Vinegars</a></li>
+              <li>
+                <a href="">Pasta & Noodles <span class="new">new</span></a>
+              </li>
+            </ul>
+            <hr />
+            <h2>Household</h2>
+            <ul>
+              <li><a href="">Detergents</a></li>
+              <li>
+                <a href="">Floor & Other Cleaners </a>
+              </li>
+              <li>
+                <a href="">Pet Care <span class="new">new</span></a>
+              </li>
+              <li>
+                <a href="">Festive Decorative</a>
+              </li>
+            </ul>
+            <hr />
+
+            <figure>
+              <figcaption>30% <i>Off/-</i></figcaption>
+              <img
+                src="images/nav-352x320.png"
+                width="352"
+                height="320"
+                alt="variety of products"
+                title="grocery products at sales"
+              />
+            </figure>
+          </details>
+        </li>
+
+        <li><a href="">About Us</a></li>
+        <li>
+          <details>
+            <summary>Page</summary>
+            <ul>
+              <li><a href="">Blog Posts</a></li>
+              <li><a href="">Blog Single</a></li>
+              <li><a href="">Single</a></li>
+              <li><a href="">Faq's</a></li>
+              <li><a href="">Short Code</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+    </nav>
+    <hr />
+    <!--// nav -->
+
+    <!-- main -->
+    <main>
+      <!-- top-banner -->
+      <section class="top-banner">
+        <h2>Start your daily online shopping!</h2>
+        <p>Stay home & we will deliver your daily need's</p>
+        <p><a href="products.html">Shop now!</a></p>
+        <img
+          src="images/banner-img_705x354.png"
+          width="705"
+          height="354"
+          alt="banner image of grocery products"
+          title="amazing products"
+        />
+      </section>
+      <hr />
+      <!--// top-banner -->
+
+      <section aria-labelledby="popular_products">
+        <h2 id="popular_products">
+          Popular Products at
+          <abbr title="Grocery Mart Online Shop">GMO</abbr>
+        </h2>
+        <figure>
+          <img
+            src="images/vegetables-640x640.jpg"
+            width="640"
+            height="640"
+            alt="vegetables department at grocery mart"
+            loading="lazy"
+            title="healthy vegetables!"
+          />
+          <figcaption><button>Play Video</button></figcaption>
+        </figure>
+
+        <ul>
+          <li>
+            <button>Vegetables</button>
+          </li>
+          <li><button>Meats & Seafood</button></li>
+          <li><button>Bakery</button></li>
+          <li><button>Beverages</button></li>
+        </ul>
+        <dialog open>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        </dialog>
+      </section>
+      <hr />
+    </main>
+    <!--// main -->
+
+    <!-- footer -->
+    <footer>
+      <h2>Flow us</h2>
+      <ul>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </li>
+        <li><a href="" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+      </ul>
+
+      <h2>Contact</h2>
+      <ul>
+        <li>
+          <address>
+            London, 235 Terry,<br />
+            10001
+          </address>
+        </li>
+        <li><a href="mailto:info@example.com">info@example.com</a></li>
+        <li><a href="tel:+972577766264">0577766264</a></li>
+      </ul>
+      <h2>Information</h2>
+      <ul>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">FAQ's</a></li>
+      </ul>
+      <p>© 2021 Grocery Mart. All rights reserved.</p>
+    </footer>
+    <!--// footer -->
   </body>
 </html>

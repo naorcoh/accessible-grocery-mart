@@ -11,6 +11,8 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="js/app.js" defer></script>
+
     <title>Grocery Mart Online Shop</title>
   </head>
   <body>
@@ -24,12 +26,17 @@
 
       <!-- cart -->
       <button id="cart">Cart</button>
+      <br />
       <!--// cart -->
 
       <!-- search -->
-      <button id="search">Search</button>
+      <label for="site-search">Search the site:</label>
+      <input type="search" id="site-search" name="q" />
+
+      <button>Search</button>
       <!--// search -->
     </header>
+    <hr />
     <!--// header -->
 
     <!-- nav -->
@@ -74,6 +81,7 @@
                 src="images/nav-352x320.png"
                 width="352"
                 height="320"
+                class="w100"
                 alt="variety of products"
                 title="grocery products at sales"
               />
@@ -102,8 +110,104 @@
 
     <!-- main -->
     <main>
-      <!-- top-banner -->
-      <section class="top-banner">
+      <!-- carousel -->
+      <section>
+        <h2>carousel</h2>
+        <div class="carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev">
+            &#10232;
+          </button>
+          <button class="carousel-button next" data-carousel-button="next">
+            &#10233;
+          </button>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <img
+                src="images/bgs3-690x310.jpg"
+                width="690"
+                height="310"
+                loading="lazy"
+                alt="fruit organize on fridge"
+                title="sweet and ripe fruit"
+              />
+            </li>
+            <li class="slide">
+              <img
+                src="images/bgs5-690x385.jpg"
+                width="690"
+                height="385"
+                loading="lazy"
+                alt="vegetables organize on stand"
+                title="in all colors"
+              />
+            </li>
+            <li class="slide">
+              <img
+                src="images/banner_botton_2-1000x600.jpg"
+                width="1000"
+                height="600"
+                loading="lazy"
+                alt="vegetable packs and organized on shelf"
+                title="alway fresh"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--// end of carousel -->
+
+      <!-- advertising board -->
+      <article id="advertising-board">
+        <h2>New at <abbr title="Grocery Mart Online">GMO</abbr></h2>
+        <div>
+          <figure>
+            <img
+              src="images/bgs3-690x310.jpg"
+              width="690"
+              height="310"
+              loading="lazy"
+              class="w100"
+              alt="fruit organize on fridge"
+              title="sweet and ripe fruit"
+            />
+            <figcaption>Best Products</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/bgs5-690x385.jpg"
+              width="690"
+              height="385"
+              loading="lazy"
+              class="w100"
+              alt="vegetables organize on stand"
+              title="in all colors"
+            />
+            <figcaption>
+              Best Store For Groceries <span>30%</span><span>Off/-</span>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <figcaption>Organic Foods</figcaption>
+            <img
+              src="images/banner_botton_2-1000x600.jpg"
+              width="1000"
+              height="600"
+              class="w100"
+              loading="lazy"
+              alt="vegetable packs and organized on shelf"
+              title="alway fresh"
+            />
+          </figure>
+        </div>
+      </article>
+      <hr />
+      <!--// end special deals -->
+
+      <!-- welcome-banner-->
+      <section class="welcome-banner">
         <h2>Start your daily online shopping!</h2>
         <p>Stay home & we will deliver your daily need's</p>
         <p><a href="products.html">Shop now!</a></p>
@@ -111,16 +215,18 @@
           src="images/banner-img_705x354.png"
           width="705"
           height="354"
+          class="w100"
           alt="banner image of grocery products"
           title="amazing products"
         />
       </section>
       <hr />
-      <!--// top-banner -->
+      <!--// end welcome-banner -->
 
-      <section aria-labelledby="popular_products">
+      <!-- new products -->
+      <article aria-labelledby="popular_products">
         <h2 id="popular_products">
-          Popular Products at
+          New Products at
           <abbr title="Grocery Mart Online Shop">GMO</abbr>
         </h2>
         <figure>
@@ -128,6 +234,7 @@
             src="images/vegetables-640x640.jpg"
             width="640"
             height="640"
+            class="w100"
             alt="vegetables department at grocery mart"
             loading="lazy"
             title="healthy vegetables!"
@@ -135,21 +242,1180 @@
           <figcaption><button>Play Video</button></figcaption>
         </figure>
 
-        <ul>
-          <li>
-            <button>Vegetables</button>
-          </li>
-          <li><button>Meats & Seafood</button></li>
-          <li><button>Bakery</button></li>
-          <li><button>Beverages</button></li>
-        </ul>
-        <dialog open>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-        </dialog>
+        <!-- start vegetables -->
+        <details>
+          <summary>Vegetables</summary>
+          <!-- <h3><button>Vegetables</button></h3> -->
+          <ul id="vegetables_tab">
+            <li>
+              <div id="product_1">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/ladies_fingers-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="Ladies' Fingers vegetable"
+                        title="popular green vegetable"
+                        loading="lazy"
+                      />
+                      <figcaption>Ladies' Fingers vegetable</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Ladies Finger</dd>
+                  <dt>Price</dt>
+                  <dd>$3.50</dd>
+                  <dt>Old Price</dt>
+                  <dd>$3.80</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <li>
+              <div id="product_2">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/eggplant-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="eggplant"
+                        title="hot sales vegetable"
+                        loading="lazy"
+                      />
+                      <figcaption>Eggplant</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Eggplant</dd>
+                  <dt>Price</dt>
+                  <dd>$3.02</dd>
+                  <dt>Old Price</dt>
+                  <dd>$3.30</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <li>
+              <div id="product_3">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/spinach-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+          </ul>
+        </details>
+        <!--// end vegetables  -->
+        <br />
+
+        <!-- start seafood  -->
+        <details>
+          <summary>Meats & Seafood</summary>
+          <!-- <h3><button>Vegetables</button></h3> -->
+          <ul id="seafood_tab">
+            <li>
+              <div id="product_4">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/prawns_big-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="prawns seafood"
+                        title="fresh seafood"
+                        loading="lazy"
+                      />
+                      <figcaption>Prawns</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Prawns (Big)</dd>
+                  <dt>Price</dt>
+                  <dd>$25.00</dd>
+                  <dt>Old Price</dt>
+                  <dd>$32.00</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <li>
+              <div id="product_5">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/silver_belly_fish-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="silver belly fish"
+                        title="hot sales fishes"
+                        loading="lazy"
+                      />
+                      <figcaption>Silver Belly Fish</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Silver Belly Fish</dd>
+                  <dt>Price</dt>
+                  <dd>$15.00</dd>
+                  <dt>Old Price</dt>
+                  <dd>$18.00</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <li>
+              <div id="product_6">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/prawns_meat-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="small prawns"
+                        title="popular seafood"
+                        loading="lazy"
+                      />
+                      <figcaption>Prawns Small</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Prawns Small</dd>
+                  <dt>Price</dt>
+                  <dd>$18.00</dd>
+                  <dt>Old Price</dt>
+                  <dd>$22.00</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+          </ul>
+        </details>
+        <!--// end seafood  -->
+        <br />
+
+        <!-- start bakery  -->
+        <details>
+          <summary>Bakery</summary>
+          <!-- <h2><button>Vegetables</button></h2> -->
+          <ul id="bakery_tab">
+            <li>
+              <div id="product_7">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/karachi_bakery-pista_soan_papdi-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="indian candy pista soan papdi"
+                        title="popular candy"
+                        loading="lazy"
+                      />
+                      <figcaption>Karachi Bakery - Pista Soan Papdi</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Pista Soan Papdi</dd>
+                  <dt>Price</dt>
+                  <dd>$8.50</dd>
+                  <dt>Old Price</dt>
+                  <dd>$8.80</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <li>
+              <div id="product_8">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/karachi_bakery-halwa_box-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="indian candy by karachi bakery halwa_box"
+                        title="great gift for holyday"
+                        loading="lazy"
+                      />
+                      <figcaption>Karachi Bakery - Halwa Box</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Halwa Box</dd>
+                  <dt>Price</dt>
+                  <dd>$2.80</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.90</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <li>
+              <div id="product_9">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/karachi_bakery-fruit_biscuits-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="fruit biscuits"
+                        title="nice with tea"
+                        loading="lazy"
+                      />
+                      <figcaption>Karachi Bakery - Fruit Biscuits</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Fruit Biscuits</dd>
+                  <dt>Price</dt>
+                  <dd>$8.00</dd>
+                  <dt>Old Price</dt>
+                  <dd>$12.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+          </ul>
+        </details>
+        <!--// end bakery  -->
+        <br />
+
+        <!-- start beverages  -->
+        <details>
+          <summary>Beverages</summary>
+          <!-- <h2><button>Vegetables</button></h2> -->
+          <ul id="beverages_tab">
+            <li>
+              <div id="product_10">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/coca_cola_company-thums_up-original-1.5l-plastic_bottle-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="thums up indian cola carbonated soft drink"
+                        title="good choice for the local market"
+                        loading="lazy"
+                      />
+                      <figcaption>
+                        The Coca-Cola Company - Thums Up - original
+                        taste(classic)
+                      </figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Thums Up - original taste(classic)</dd>
+                  <dt>Price</dt>
+                  <dd>$1.05</dd>
+                  <dt>Old Price</dt>
+                  <dd>$1.50</dd>
+                </dl>
+
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <li>
+              <div id="product_11">
+                <dl>
+                  <dt>image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/coca_cola_company-fanta-orange-1.5l-plastic_bottle-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="Fanta orange fruit-flavored carbonated soft drinks"
+                        title="the best beverage for the hot summer"
+                        loading="lazy"
+                      />
+                      <figcaption>
+                        The Coca Cola Company - Fanta - orange
+                      </figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Fanta - orange</dd>
+                  <dt>Price</dt>
+                  <dd>$2.05</dd>
+                  <dt>Old Price</dt>
+                  <dd>$3.00</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <li>
+              <div id="product_12">
+                <dl>
+                  <dt>image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/coca_cola_company-coca_cola-original_taste-355ml-can-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="coca cola carbonated soft drinks"
+                        title="best seller at beverages department"
+                        loading="lazy"
+                      />
+                      <figcaption>
+                        The Coca Cola Company - Coca Cola - original
+                        taste(classic)
+                      </figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Coca Cola - original taste(classic)</dd>
+                  <dt>Price</dt>
+                  <dd>$0.50</dd>
+                  <dt>Old Price</dt>
+                  <dd>$0.80</dd>
+                </dl>
+
+                <button>Add to Cart</button>
+              </div>
+            </li>
+          </ul>
+        </details>
+        <br />
+
+        <!--// end beverages  -->
+      </article>
+      <hr />
+      <!--// end popular products -->
+      <!-- coupons -->
+      <section id="coupons">
+        <h2>New Coupon at <abbr title="">GMO</abbr></h2>
+        <button onclick="openTab('weekly-coupons')">Weekly Coupons</button>
+        <button onclick="openTab('loyalty-program')">
+          Coupons for Loyalty Program
+        </button>
+
+        <div
+          id="weekly-coupons"
+          class="tabElement weekly-coupons carousel"
+          data-scroller
+          data-tabElement
+        >
+          <button class="prev" data-media-scroller-button="prev">
+            &#10232;
+          </button>
+          <button class="next" data-media-scroller-button="next">
+            &#10233;
+          </button>
+          <ul id="media-scroller-ul" class="media-scroller snaps-inline">
+            <!-- group-one -->
+
+            <li class="" data-active>
+              <div id="product_1" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/ladies_fingers-220x250.png"
+                        width="220"
+                        height="250"
+                        class="w100"
+                        alt="Ladies' Fingers vegetable"
+                        title="popular green vegetable"
+                        loading="lazy"
+                      />
+                      <figcaption>Ladies' Fingers vegetable</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Ladies Finger</dd>
+                  <dt>Price</dt>
+                  <dd>$3.50</dd>
+                  <dt>Old Price</dt>
+                  <dd>$3.80</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_2" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/eggplant-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="eggplant"
+                        title="hot sales vegetable"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Eggplant</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Eggplant</dd>
+                  <dt>Price</dt>
+                  <dd>$3.02</dd>
+                  <dt>Old Price</dt>
+                  <dd>$3.30</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_3" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/spinach-220x250.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+            <!-- end of group-one -->
+
+            <!-- group-two -->
+            <li class="">
+              <div id="product_4" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/d1.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_5" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/d2.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_6" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/d3.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_7" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/e1.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_8" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/e2.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_9" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/e3.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_10" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/e4.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_11" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/ee1.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_12" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/ee2.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_13" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/ee3.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_14" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/ee4.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_15" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/f1.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_16" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/f2.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_17" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/f3.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_18" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/f4.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_19" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/f11.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_20" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/f22.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <li class="">
+              <div id="product_21" class="product-style">
+                <dl>
+                  <dt>Image</dt>
+                  <dd>
+                    <figure>
+                      <img
+                        src="images/f22.png"
+                        width="220"
+                        height="250"
+                        alt="spinach"
+                        title="fresh and green"
+                        loading="lazy"
+                        class="w100"
+                      />
+                      <figcaption>Spinach</figcaption>
+                    </figure>
+                  </dd>
+                  <dt>Name</dt>
+                  <dd>Spinach</dd>
+                  <dt>Price</dt>
+                  <dd>$2.45</dd>
+                  <dt>Old Price</dt>
+                  <dd>$2.50</dd>
+                </dl>
+                <button>Add to Cart</button>
+              </div>
+            </li>
+
+            <!--// end of group-two -->
+          </ul>
+        </div>
+
+        <div id="loyalty-program" class="tabElement hide-element">
+          <p>Coupons for Loyalty Program</p>
+        </div>
       </section>
       <hr />
+
+      <!-- end of coupons -->
+
+      <section>
+        <h2>
+          Discover Deals at <abbr title="Grocery Mart Online Shop">GMO</abbr>
+        </h2>
+      </section>
+      <hr />
+
+      <!-- order -->
+
+      <section>
+        <h2>Choice Your way to get your order</h2>
+
+        <figure>
+          <figcaption>
+            <span>Free Delivery to your door!</span> <br />
+            20% Cashback
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/banner_botton_1-1000x600.jpg"
+            width="1000"
+            height="600"
+            class="w100"
+            alt="a women with grocery basket"
+            title="best product in the city"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <figure>
+        <figcaption>Pickup any time</figcaption>
+
+        <img
+          src="images/bgs4-400x600.jpg"
+          width="400"
+          height="385"
+          loading="lazy"
+          class="w100"
+          alt="client pick-up vegetables products to basket"
+          title="vegetables in good price"
+        />
+      </figure>
+      <hr />
+      <!--// end of order -->
+
+      <!-- top products -->
+      <section>
+        <h2>Best Seller</h2>
+        <ul>
+          <li>
+            <div id="top-product_1">
+              <dl>
+                <dt>Image</dt>
+                <dd>
+                  <figure>
+                    <img
+                      src="images/karachi_bakery-halwa_box-220x250.png"
+                      width="220"
+                      height="250"
+                      alt="indian candy by karachi bakery halwa_box"
+                      title="great gift for holyday"
+                      loading="lazy"
+                      class="w100"
+                    />
+                    <figcaption>Karachi Bakery - Halwa Box</figcaption>
+                  </figure>
+                </dd>
+                <dt>Name</dt>
+                <dd>Halwa Box</dd>
+                <dt>Price</dt>
+                <dd>$2.80</dd>
+                <dt>Old Price</dt>
+                <dd>$2.90</dd>
+              </dl>
+              <button>Add to Cart</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <hr />
+
+      <!--// end of top products -->
+      <!-- top brands -->
+
+      <section>
+        <h2>Explore <abbr title="Grocery Mart Online Shop">GMO</abbr></h2>
+        <ul>
+          <li>
+            <img
+              src="images/tb1-200x85.png"
+              width="200"
+              height="85"
+              class="w100"
+              loading="lazy"
+              alt="Nestle logo - Nestle is a multinational food and drink processing conglomerate corporation"
+              title="Nestle - It is the largest publicly held food company in the world"
+            />
+          </li>
+          <li>
+            <img
+              src="images/tb2-200x85.png"
+              width="200"
+              height="85"
+              class="w100"
+              loading="lazy"
+              alt="Rowntree's logo - Rowntree's is a british confectionery brand"
+              title="Rowntree developed the Kit Kat"
+            />
+          </li>
+          <li>
+            <img
+              src="images/tb3-200x85.png"
+              width="200"
+              height="85"
+              class="w100"
+              loading="lazy"
+              alt="Cadbury logo - Cadbury is a confectionery brand"
+              title=" Cadbury is the second largest confectionery brand"
+            />
+          </li>
+          <li>
+            <img
+              src="images/tb4-200x85.png"
+              width="200"
+              height="85"
+              class="w100"
+              loading="lazy"
+              alt="Flahavan's logo - Flahavan's is a milling company"
+              title="run by the Flahavan family since about 1785 located in the village of Kilmacthomas"
+            />
+          </li>
+          <li>
+            <img
+              src="images/tb5-200x85.png"
+              width="200"
+              height="85"
+              class="w100"
+              loading="lazy"
+              alt="Batchelors logo - Batchelors is a popular brand of predominantly dried food products"
+              title="It released its first dried soup in 1949, and it started selling its convenience Cup-a-Soup range in 1972"
+            />
+          </li>
+        </ul>
+      </section>
+      <!--// end of top brands -->
     </main>
+
     <!--// main -->
+    <hr />
 
     <!-- footer -->
     <footer>
@@ -181,7 +1447,7 @@
         <li><a href="">Contact Us</a></li>
         <li><a href="">FAQ's</a></li>
       </ul>
-      <p>© 2021 Grocery Mart. All rights reserved.</p>
+      <p>&copy; 2021 Grocery Mart. All rights reserved.</p>
     </footer>
     <!--// footer -->
   </body>

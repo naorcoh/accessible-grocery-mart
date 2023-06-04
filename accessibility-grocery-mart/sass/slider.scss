@@ -1,0 +1,113 @@
+//colors
+$primary-color: aliceblue;
+$accent-color: orange;
+$text-color: #333;
+$border-color: hotpink;
+//size
+$default-size: 1rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    --primary-color:#{$primary-color};
+    --accent-color:#{$accent-color};
+    --text-color: #{$text-color};
+    --default-size:#{$default-size};
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    // padding: 0;
+    // margin: 0;
+}
+
+body{
+    
+font-family: 'Roboto', sans-serif;
+size: var(--default-size);
+color: var(--primary-color);
+background: var(--text-color);
+}
+
+@mixin reset-list() {    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list($Sliders : 8) {
+    // border: hotpink solid 2px;
+    width: 1700px;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: repeat($Sliders, 1fr); 
+    gap: 0.5rem;
+    @include reset-list;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+//box-modal
+
+.slider-warpper {
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: column;
+    border: limegreen solid 2px;
+    transform: translateX(-90%);
+}
+
+.prev .next {
+    font-size: 2rem;
+}
+
+
+
+
+.media-slider {
+    @include horizontal-list;
+    position: relative;
+    // overflow-x: scroll;
+        border: solid pink 2px;
+        margin: 20px;
+
+    right: 420.333px;
+    // transform: translateX();
+
+    
+    // transition: transform 0.3 ease ;
+
+}
+
+
+
+.media-slider:hover {
+    // transform: translateX(-38%);
+}
+
+
+.container {
+    width: 1776px;
+    // border: red solid 2px;
+    // width: 35%;
+    overflow: hidden;
+    margin: 0 auto;
+    // overflow: scroll;
+    touch-action: pan-x;
+    border: solid greenyellow 2px;
+    overscroll-behavior: contain;
+
+
+    
+
+}
+
+
+
+
+
+
